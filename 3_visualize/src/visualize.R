@@ -3,6 +3,9 @@
 #' @param out_filename string file name under which to save plot (in out dir)
 
 plot_data <- function(eval_data, out_filename){
+  project_output_dir =  dirname(out_filename)
+  dir.create(project_output_dir, showWarnings = FALSE)
+  
   png(file = out_filename, width = 8, height = 10, res = 200, units = 'in')
   par(omi = c(0,0,0.05,0.05), mai = c(1,1,0,0), las = 1, mgp = c(2,.5,0), cex = 1.5)
   
