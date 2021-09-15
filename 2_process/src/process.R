@@ -20,9 +20,9 @@ process_data <- function(in_filepath){
 
 #' Save the processed data
 #' @param eval_data data table to save to csv
-#' @param file string file path under which to save data locally (in out dir)
+#' @param out_filepath string file path under which to save data locally (in out dir)
 
-write_csv <- function(eval_data, file){
+write_csv <- function(eval_data, out_filepath){
   project_output_dir =  dirname(file)
   dir.create(project_output_dir, showWarnings = FALSE)
   readr::write_csv(eval_data, file = file)
